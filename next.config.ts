@@ -8,15 +8,10 @@ const nextConfig: NextConfig = {
   },
   eslint: {
     ignoreDuringBuilds: true,
-  //},
-  //typescript: {
-    // Warning: This allows production builds to successfully complete even if
-    // your project has type errors.
-    //ignoreBuildErrors: true,
-  //},
-  //basePath: '/your-repo-name', // Add this line
-}};
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+};
 
-//module.exports = nextConfig;
-//export default nextConfig;
 export default nextConfig;
