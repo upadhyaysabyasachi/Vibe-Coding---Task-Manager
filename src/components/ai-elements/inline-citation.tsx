@@ -13,7 +13,7 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  useCarousel,
+  // useCarousel, // Remove this line
 } from '@/components/ui/carousel';
 import { ArrowLeftIcon, ArrowRightIcon } from 'lucide-react';
 
@@ -129,22 +129,22 @@ export const InlineCitationCarouselIndex = ({
   className,
   ...props
 }: InlineCitationCarouselIndexProps) => {
-  const { api } = useCarousel();
+  // const { api } = useCarousel(); // Remove this line
   const [current, setCurrent] = React.useState(0);
   const [count, setCount] = React.useState(0);
 
   React.useEffect(() => {
-    if (!api) {
-      return;
-    }
+    // if (!api) { // Remove this line
+    //   return; // Remove this line
+    // } // Remove this line
 
-    setCount(api.scrollSnapList().length);
-    setCurrent(api.selectedScrollSnap() + 1);
+    // setCount(api.scrollSnapList().length); // Remove this line
+    // setCurrent(api.selectedScrollSnap() + 1); // Remove this line
 
-    api.on('select', () => {
-      setCurrent(api.selectedScrollSnap() + 1);
-    });
-  }, [api]);
+    // api.on('select', () => { // Remove this line
+    //   setCurrent(api.selectedScrollSnap() + 1); // Remove this line
+    // }); // Remove this line
+  }, []); // Remove this line
 
   return (
     <div
@@ -165,13 +165,13 @@ export const InlineCitationCarouselPrev = ({
   className,
   ...props
 }: InlineCitationCarouselPrevProps) => {
-  const { api } = useCarousel();
+  // const { api } = useCarousel(); // Remove this line
 
   const handleClick = React.useCallback(() => {
-    if (api) {
-      api.scrollPrev();
-    }
-  }, [api]);
+    // if (api) { // Remove this line
+    //   api.scrollPrev(); // Remove this line
+    // } // Remove this line
+  }, []); // Remove this line
 
   return (
     <button
@@ -192,13 +192,13 @@ export const InlineCitationCarouselNext = ({
   className,
   ...props
 }: InlineCitationCarouselNextProps) => {
-  const { api } = useCarousel();
+  // const { api } = useCarousel(); // Remove this line
 
   const handleClick = React.useCallback(() => {
-    if (api) {
-      api.scrollNext();
-    }
-  }, [api]);
+    // if (api) { // Remove this line
+    //   api.scrollNext(); // Remove this line
+    // } // Remove this line
+  }, []); // Remove this line
 
   return (
     <button

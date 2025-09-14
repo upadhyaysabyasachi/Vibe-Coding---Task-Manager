@@ -6,9 +6,7 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true
   },
-  //eslint: {
-    // Warning: This allows production builds to successfully complete even if
-    // your project has ESLint errors.
+  eslint: {
     ignoreDuringBuilds: true,
   //},
   //typescript: {
@@ -17,7 +15,8 @@ const nextConfig: NextConfig = {
     //ignoreBuildErrors: true,
   //},
   //basePath: '/your-repo-name', // Add this line
-};
+}};
 
-module.exports = nextConfig;
+//module.exports = nextConfig;
 //export default nextConfig;
+export default nextConfig;
