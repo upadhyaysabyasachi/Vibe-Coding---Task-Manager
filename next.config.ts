@@ -6,17 +6,18 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true
   },
-  eslint: {
+  //eslint: {
     // Warning: This allows production builds to successfully complete even if
     // your project has ESLint errors.
     ignoreDuringBuilds: true,
-  },
-  typescript: {
+  //},
+  //typescript: {
     // Warning: This allows production builds to successfully complete even if
     // your project has type errors.
-    ignoreBuildErrors: true,
-  },
+    //ignoreBuildErrors: true,
+  //},
   //basePath: '/your-repo-name', // Add this line
 };
 
-export default nextConfig;
+module.exports = nextConfig;
+//export default nextConfig;
